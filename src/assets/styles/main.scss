@@ -22,7 +22,8 @@ button {
 	width: 100%;
 	height: 40vh;
 	
-	color: green;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SMPTE_Color_Bars.svg/1200px-SMPTE_Color_Bars.svg.png');
+	background-size: cover;
 	background-color: black;
 
 	user-select: none;
@@ -30,6 +31,18 @@ button {
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	-o-user-select: none;
+
+	-webkit-box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
+
+	#stat-display {
+		margin: 12px;
+		padding: 6px 12px;
+		color: white;
+		background-color: black;
+		width: fit-content;
+	}
 }
 
 #controls {
