@@ -11,6 +11,13 @@ body, button {
 	font-size: 20px;
 }
 
+button {
+	cursor: pointer;
+	background: green;
+	border: none;
+}
+
+
 #view {
 	width: 100%;
 	height: 40vh;
@@ -34,28 +41,28 @@ body, button {
 
 
 	#tabs {
-		padding: 10px;
+		padding: 12px;
+		background-color: rgb(14, 14, 22);
 
 		.tab-button {
 			cursor: pointer;
-			background: none;
 			color: green;
 			border: 2px solid green;
 			border-radius: 5px;
-			padding: 1px 10px;
+			padding: 2px 10px;
 
 			&:not(:last-child) {
-				margin-right: 10px;
+				margin-right: 4px;
 			}
 		}
 	
 		.tab-button.active {
-			background-color: rgb(69, 69, 77);
+			background-color: rgb(30, 30, 34);
 		}
 	}
 
 	#content {
-		padding: 0 10px 10px 10px;
+		padding: 12px;
 
 		.tab-content {
 			display: none;
@@ -64,5 +71,11 @@ body, button {
 		.tab-content.active {
 			display: block;
 		}
-	}	
+	}
+
+	#log ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
 }

@@ -6,6 +6,7 @@
 		<title>Incremental RPG</title>
 	</head>
 	<body>
+		<!-- Game View -->
 		<div id="view">
 			<div>Health: <span id="stat-health"></span>/<span id="stat-maxHealth"></span></div>
 			<div>Level: <span id="stat-level"></span></div>
@@ -13,28 +14,40 @@
 		</div>
 
 		<div id="controls">
+			<!-- Tabs -->
 			<div id="tabs">
-				<button class="tab-button active" data-target="actions">Actions</button><button class="tab-button" data-target="items">Items</button><button class="tab-button" data-target="log">Log</button><button class="tab-button" data-target="settings">Settings</button>
+				<span class="tab-button active" data-target="actions">Actions</span>
+				<span class="tab-button" data-target="inventory">Inventory</span>
+				<span class="tab-button" data-target="log">Log</span>
+				<span class="tab-button" data-target="settings">Settings</span>
 			</div>
 
 			<div id="content">
+				<!-- Actions -->
 				<div class="tab-content active" id="actions">
 					Actions
 				</div>
 	
-				<div class="tab-content" id="items">
-					Items
+				<!-- Inventory -->
+				<div class="tab-content" id="inventory">
+					Money: $<span id="stat-money"></span>
 				</div>
 
+				<!-- Log -->
 				<div class="tab-content" id="log">
 					<ul>
+						<li>Log item 3</li>
+						<li>Log item 2</li>
 						<li>Log item 1</li>
 					</ul>
 				</div>
 	
+				<!-- Settings -->
 				<div class="tab-content" id="settings">
-					<button id="save-game">Save Game</button>
-					<button id="load-game">Load Game</button>
+					<button id="save-game-button">Save Game</button>
+					<button id="load-game-button">Load Game</button>
+
+					<p>Copyright 2023 * <a href="https://github.com/snab43/incremental-rpg" target="_blank">GitHub</a></p>
 				</div>
 			</div>
 		</div>

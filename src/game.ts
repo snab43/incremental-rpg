@@ -3,6 +3,7 @@ export class Game {
 	maxHealth: number = 10;
 	level: number = 1;
 	exp: number = 0;
+	money: number = 0;
 
     constructor() {
         if (localStorage.getItem('gameData')) {
@@ -17,12 +18,14 @@ export class Game {
 			health: this.health,
 			maxHealth: this.maxHealth,
 			level: this.level,
-			exp: this.exp
+			exp: this.exp,
+			money: this.money
 		}
 	} 
 
     saveGame(): void {
         localStorage.setItem('gameData', JSON.stringify(this.getData()));
+		console.log("Game saved.");
     }
 
     loadGame(): void {
@@ -33,6 +36,9 @@ export class Game {
 			this.maxHealth = save.maxHealth;
 			this.level = save.level;
 			this.exp = save.exp;
+			this.money = save.money;
+
+			console.log("Game loaded.");
 		} else {
             console.log("No saved game data found.");
         }

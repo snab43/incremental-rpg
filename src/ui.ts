@@ -16,9 +16,6 @@ export namespace UI {
 				targetContent.classList.add('active');
 			});
 		});
-
-		// Set up save and load buttons
-		// TODO
 	}
 
 	export function reloadStats(health: number, maxHealth: number, level: number, exp: number): void {
@@ -26,5 +23,9 @@ export namespace UI {
 		document.getElementById('stat-maxHealth')!.innerText = `${maxHealth}`;
 		document.getElementById('stat-level')!.innerText = `${level}`;
 		document.getElementById('stat-exp')!.innerText = `${exp}`;
+	}
+
+	export function reloadInventory(money: number): void {
+		document.getElementById('stat-money')!.innerText = `${money.toFixed(2)}`;
 	}
 }
