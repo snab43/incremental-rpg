@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Incremental RPG</title>
+	</head>
+	<body>
+		<div id="view">
+			<div>Health: <span id="stat-health"></span>/<span id="stat-maxHealth"></span></div>
+			<div>Level: <span id="stat-level"></span></div>
+			<div>EXP: <span id="stat-exp"></span></div>
+		</div>
+
+		<div id="controls">
+			<div id="tabs">
+				<button class="tab-button active" data-target="actions">Actions</button><button class="tab-button" data-target="items">Items</button><button class="tab-button" data-target="log">Log</button><button class="tab-button" data-target="settings">Settings</button>
+			</div>
+
+			<div id="content">
+				<div class="tab-content active" id="actions">
+					Actions
+				</div>
+	
+				<div class="tab-content" id="items">
+					Items
+				</div>
+
+				<div class="tab-content" id="log">
+					<ul>
+						<li>Log item 1</li>
+					</ul>
+				</div>
+	
+				<div class="tab-content" id="settings">
+					<button id="save-game">Save Game</button>
+					<button id="load-game">Load Game</button>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="/src/main.ts"></script>
+	</body>
 </html>
