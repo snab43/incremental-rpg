@@ -102,7 +102,7 @@ a {
 	color: white;
 	background-color: rgb(30, 30, 34);
 
-	#tabs {
+	#control-tabs {
 		display: flex;
 		flex-wrap: wrap;
 
@@ -134,7 +134,7 @@ a {
 		}
 	}
 
-	#content {
+	#control-content {
 		padding: 12px;
 
 		.tab-content {
@@ -144,11 +144,30 @@ a {
 		.tab-content.active {
 			display: block;
 		}
-	}
 
-	#log ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
+		#actions {
+			.action-container:not(:empty) {
+				background-color: rgb(39, 39, 43);
+				padding: 12px;
+		
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+	
+		#log-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				padding: 3px 6px;
+			}
+
+			li:nth-child(odd) {
+				background-color: rgb(39, 39, 43);
+			}
+		}
 	}
 }

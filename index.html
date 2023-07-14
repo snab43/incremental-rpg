@@ -29,38 +29,40 @@
 			<!-- Game Controls -->
 			<div id="controls">
 				<!-- Tabs -->
-				<div id="tabs">
+				<div id="control-tabs">
 					<span class="tab-button active" data-target="actions">Actions</span>
 					<span class="tab-button" data-target="inventory">Inventory</span>
 					<span class="tab-button" data-target="log">Log</span>
 					<span class="tab-button" data-target="settings">Settings</span>
 				</div>
 
-				<div id="content">
+				<!-- Content -->
+				<div id="control-content">
 					<!-- Actions -->
-					<div class="tab-content active" id="actions">
-						<div id="do-actions">
-							<button>Dig</button>
+					<div id="actions" class="tab-content active">
+						<div id="effort-actions" class="action-container">
+							<button>Chop wood</button>
 							<button>Fight</button>
-							<button>Chop Wood</button>
 						</div>
-						<div id="go-actions">
-
+						<div id="buy-actions" class="action-container"></div>
+						<div id="sell-actions" class="action-container"></div>
+						<div id="go-actions" class="action-container">
+							<button>Go to Town</button>
 						</div>
 					</div>
 		
 					<!-- Inventory -->
-					<div class="tab-content" id="inventory">
+					<div id="inventory" class="tab-content">
 						Money: $<span id="stat-money"></span>
 					</div>
 
 					<!-- Log -->
-					<div class="tab-content" id="log">
+					<div id="log" class="tab-content">
 						<ul id="log-list"></ul>
 					</div>
 		
 					<!-- Settings -->
-					<div class="tab-content" id="settings">
+					<div id="settings" class="tab-content">
 						<button id="save-game-button">Save Game</button>
 						<button id="load-game-button">Load Game</button>
 						<button id="delete-game-button">Delete Game</button>
