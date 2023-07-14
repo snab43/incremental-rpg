@@ -47,6 +47,11 @@ export namespace UI {
 		document.getElementById('stat-exp')!.innerText = `${player.exp}`;
 	}
 
+	export function reloadActions(): void {
+		//let doActions = document.getElementById('do-actions');
+		//let goActions = document.getElementById('go-actions');
+	}
+
 	export function reloadInventory(inventory: InventoryData): void {
 		document.getElementById('stat-money')!.innerText = `${inventory.money.toFixed(2)}`;
 	}
