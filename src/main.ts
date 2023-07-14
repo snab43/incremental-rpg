@@ -1,7 +1,7 @@
 import { Game } from './game';
 import { UI } from './ui';
 
-import './assets/styles/main.scss';
+import './styles/main.scss';
 
 document.addEventListener("DOMContentLoaded", function() {
 	console.log("DEBUG: DOM loaded.");

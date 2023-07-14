@@ -21,27 +21,33 @@ button {
 #view {
 	width: 100%;
 	height: 40vh;
+	position: relative;
 	
-	background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/SMPTE_Color_Bars.svg/1200px-SMPTE_Color_Bars.svg.png');
-	background-size: cover;
+	background: url('/img/grass.png');
+	background-repeat: repeat;
 	background-color: black;
 
+	pointer-events: none;
 	user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
-	-o-user-select: none;
 
-	-webkit-box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
-    -moz-box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
-    box-shadow: inset 0 0 50px rgb(0, 0, 0, 0.25);
-
-	#stat-display {
+	.display {
 		margin: 12px;
 		padding: 6px 12px;
 		color: white;
 		background-color: black;
 		width: fit-content;
+	}
+
+	#location-display {
+		position: absolute;
+		bottom: 0;
+	}
+
+	#player {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-30px) translateY(-45px);
 	}
 }
 
@@ -54,14 +60,13 @@ button {
 
 
 	#tabs {
-		padding: 12px;
+		padding: 16px 12px;
 		background-color: rgb(14, 14, 22);
 
 		.tab-button {
 			cursor: pointer;
 			color: green;
 			border: 2px solid green;
-			border-radius: 5px;
 			padding: 2px 10px;
 
 			&:not(:last-child) {
@@ -70,7 +75,9 @@ button {
 		}
 	
 		.tab-button.active {
-			background-color: rgb(30, 30, 34);
+			cursor: default;
+			color: white;
+			background-color: green;
 		}
 	}
 
