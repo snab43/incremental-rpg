@@ -4,7 +4,7 @@ export interface PlayerData {
 	stamina: number,
 	maxStamina: number,
 	level: number,
-	exp: number,
+	exp: number
 }
 
 export class Player {
@@ -58,5 +58,6 @@ export class Player {
 
 	delete(): void {
 		localStorage.removeItem('playerData');
+		console.log("playerData deleted.");
 	}
 }

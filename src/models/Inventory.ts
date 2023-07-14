@@ -46,5 +46,6 @@ export class Inventory {
 
 	delete(): void {
 		localStorage.removeItem('inventoryData');
+		console.log("inventoryData deleted");
 	}
 }
