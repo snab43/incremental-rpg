@@ -1,5 +1,5 @@
-import { Game } from './game';
-import { UI } from './ui';
+import { Game } from './Game';
+import { UI } from './views/ui';
 
 import './styles/main.scss';
 
@@ -8,7 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	const game = new Game();
 
 	console.log("Initializing UI.");
-	UI.initialize();
-	UI.reloadStats(game.health, game.maxHealth, game.stamina, game.maxStamina, game.level, game.exp);
-	UI.reloadInventory(game.money);
+	UI.initialize(game);
 });
