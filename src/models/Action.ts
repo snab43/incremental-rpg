@@ -1,8 +1,8 @@
 enum ACTION_TYPE {
-	"Effort",
-	"Buy",
-	"Sell",
-	"Go"
+	Effort = "Effort",
+	Buy = "Buy",
+	Sell = "Sell",
+	Go = "Go"
 }
 
 export class Action {

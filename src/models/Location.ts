@@ -1,10 +1,10 @@
 import { Action } from './Action';
 
 enum LOCATION_TYPE {
-	"Town",
-	"Store",
-	"Nature",
-	"Dungeon"
+	Town = "Town",
+	Store = "Store",
+	Nature = "Nature",
+	Dungeon = "Dungeon"
 }
 
 export class Location {
