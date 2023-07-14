@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	console.log("Initializing UI.");
 	UI.initialize();
-	UI.reloadStats(game.health, game.maxHealth, game.level, game.exp);
+	UI.reloadStats(game.health, game.maxHealth, game.stamina, game.maxStamina, game.level, game.exp);
 	UI.reloadInventory(game.money);
 });

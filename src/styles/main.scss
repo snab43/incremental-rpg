@@ -12,6 +12,7 @@ body, button {
 
 button {
 	cursor: pointer;
+	color: black;
 	background-color: green;
 	border: none;
 	padding: 4px 10px;
@@ -115,6 +116,7 @@ a {
 			border: 2px solid green;
 			margin-bottom: 6px;
 			padding: 2px 10px;
+			text-transform: uppercase;
 
 			&:not(:last-child) {
 				margin-right: 12px;

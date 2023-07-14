@@ -20,9 +20,11 @@ export namespace UI {
 		});
 	}
 
-	export function reloadStats(health: number, maxHealth: number, level: number, exp: number): void {
+	export function reloadStats(health: number, maxHealth: number, stamina: number, maxStamina: number, level: number, exp: number): void {
 		document.getElementById('stat-health')!.innerText = `${health}`;
 		document.getElementById('stat-maxHealth')!.innerText = `${maxHealth}`;
+		document.getElementById('stat-stamina')!.innerText = `${stamina}`;
+		document.getElementById('stat-maxStamina')!.innerText = `${maxStamina}`;
 		document.getElementById('stat-level')!.innerText = `${level}`;
 		document.getElementById('stat-exp')!.innerText = `${exp}`;
 	}
