@@ -6,56 +6,58 @@
 		<title>Incremental RPG</title>
 	</head>
 	<body>
-		<!-- Game View -->
-		<div id="view">
-			<div id="stat-display" class="display">
-				<div>Health: <span id="stat-health"></span>/<span id="stat-maxHealth"></span></div>
-				<div>Level: <span id="stat-level"></span></div>
-				<div>EXP: <span id="stat-exp"></span></div>
-			</div>
+		<div id="game-container">
+			<!-- Game Notifications -->
+			<ul id="notifications"></ul>
 
-			<div id="location-display" class="display">
-				<div>Location: <span id="location">Forest</span></div>
-			</div>
-
-			<img id="player" src="/img/player.png"></div>
-		</div>
-
-		<div id="controls">
-			<!-- Tabs -->
-			<div id="tabs">
-				<span class="tab-button active" data-target="actions">Actions</span>
-				<span class="tab-button" data-target="inventory">Inventory</span>
-				<span class="tab-button" data-target="log">Log</span>
-				<span class="tab-button" data-target="settings">Settings</span>
-			</div>
-
-			<div id="content">
-				<!-- Actions -->
-				<div class="tab-content active" id="actions">
-					Actions
-				</div>
-	
-				<!-- Inventory -->
-				<div class="tab-content" id="inventory">
-					Money: $<span id="stat-money"></span>
+			<!-- Game View -->
+			<div id="view">
+				<div id="stat-display" class="display">
+					<div>Health: <span id="stat-health"></span>/<span id="stat-maxHealth"></span></div>
+					<div>Level: <span id="stat-level"></span></div>
+					<div>EXP: <span id="stat-exp"></span></div>
 				</div>
 
-				<!-- Log -->
-				<div class="tab-content" id="log">
-					<ul>
-						<li>Log item 3</li>
-						<li>Log item 2</li>
-						<li>Log item 1</li>
-					</ul>
+				<div id="location-display" class="display">
+					<div>Location: <span id="location">Forest</span></div>
 				</div>
-	
-				<!-- Settings -->
-				<div class="tab-content" id="settings">
-					<button id="save-game-button">Save Game</button>
-					<button id="load-game-button">Load Game</button>
 
-					<p>Copyright 2023 * <a href="https://github.com/snab43/incremental-rpg" target="_blank">GitHub</a></p>
+				<img id="player" src="/images/player.png"></div>
+			</div>
+
+			<!-- Game Controls -->
+			<div id="controls">
+				<!-- Tabs -->
+				<div id="tabs">
+					<span class="tab-button active" data-target="actions">Actions</span>
+					<span class="tab-button" data-target="inventory">Inventory</span>
+					<span class="tab-button" data-target="log">Log</span>
+					<span class="tab-button" data-target="settings">Settings</span>
+				</div>
+
+				<div id="content">
+					<!-- Actions -->
+					<div class="tab-content active" id="actions">
+						Actions
+					</div>
+		
+					<!-- Inventory -->
+					<div class="tab-content" id="inventory">
+						Money: $<span id="stat-money"></span>
+					</div>
+
+					<!-- Log -->
+					<div class="tab-content" id="log">
+						<ul id="log-list"></ul>
+					</div>
+		
+					<!-- Settings -->
+					<div class="tab-content" id="settings">
+						<button id="save-game-button">Save Game</button>
+						<button id="load-game-button">Load Game</button>
+
+						<p>Copyright 2023 * <a href="https://github.com/snab43/incremental-rpg" target="_blank">GitHub</a></p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -3,14 +3,11 @@ import { UI } from './ui';
 
 import './styles/main.scss';
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 	console.log("DEBUG: DOM loaded.");
 	const game = new Game();
 
-	// TODO: Move these into ui.ts somehow?
-	document.getElementById('save-game-button')?.addEventListener('click', () => {game.saveGame()});
-	document.getElementById('load-game-button')?.addEventListener('click', () => {game.loadGame()});
-
+	console.log("Initializing UI.");
 	UI.initialize();
 	UI.reloadStats(game.health, game.maxHealth, game.level, game.exp);
 	UI.reloadInventory(game.money);

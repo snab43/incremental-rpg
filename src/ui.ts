@@ -1,6 +1,8 @@
+import { Utils } from './utils';
+
 export namespace UI {
 	export function initialize(): void {
-		// Set up tabs
+		// Set up controls
 		const tabs = Array.from(document.querySelectorAll('.tab-button')) as HTMLElement[];
 		const contents = Array.from(document.querySelectorAll('.tab-content')) as HTMLElement[];
 
@@ -27,5 +29,31 @@ export namespace UI {
 
 	export function reloadInventory(money: number): void {
 		document.getElementById('stat-money')!.innerText = `${money.toFixed(2)}`;
+	}
+
+	export function sendNotification(text: string, log: boolean): void {
+		let ul = document.getElementById('notifications');
+		let li = document.createElement('li');
+
+		li.appendChild(document.createTextNode(text));
+		ul?.prepend(li);
+
+		li.addEventListener('click', () => {
+			li.remove();
+		});
+
+		setTimeout(() => {
+			li.remove();
+		}, 3000);
+
+		if (log) writeToLog(text);
+	}
+
+	export function writeToLog(logEntry: string): void {
+		let ul = document.getElementById('log-list');
+		let li = document.createElement('li');
+
+		li.appendChild(document.createTextNode(`${Utils.getTime()} - ${logEntry}`));
+		ul?.prepend(li);
 	}
 }
