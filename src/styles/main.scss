@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-$color-font: #f7f0f4;
+$color-font: #f0f0f0;
 $color-font-heading: #e9d3df;
+$color-font-inactive: darken($color-font, 25%);
 
 $color-interactive: #1e8d1e;
 $color-interactive-hover: lighten($color-interactive, 10%);
 
-$color-background: #4b3b44;
+$color-background: #22191e;
+$color-background-lighter: lighten($color-background, 15%);
+$color-background-light: lighten($color-background, 10%);
 $color-background-dark: darken($color-background, 10%);
 $color-background-darker: darken($color-background, 15%);
-$color-background-darkest: darken($color-background, 20%);
 
 body {
 	margin: 0;
@@ -39,6 +41,18 @@ button {
 	&:hover {
 		background-color: $color-interactive-hover;
 	}
+}
+
+button.inactive {
+	cursor: default;
+	color: $color-font-inactive;
+	background: repeating-linear-gradient(
+		-45deg,
+		$color-background,
+		$color-background 10px,
+		$color-background-dark 10px,
+		$color-background-dark 20px
+	);
 }
 
 a {
@@ -71,7 +85,7 @@ a {
 	li {
 		width: fit-content;
 		color: $color-font;
-		background-color: $color-background-darkest;
+		background-color: $color-background-dark;
 		padding: 6px 12px;
 		margin-bottom: 6px;
 		cursor: default;
@@ -96,7 +110,7 @@ a {
 		margin: 12px;
 		padding: 6px 12px;
 		color: $color-font;
-		background-color: $color-background-darkest;
+		background-color: $color-background-darker;
 		width: fit-content;
 	}
 
@@ -119,14 +133,14 @@ a {
 	height: 60vh;
 
 	color: $color-font;
-	background-color: $color-background-darker;
+	background-color: $color-background;
 
 	#control-tabs {
 		display: flex;
 		flex-wrap: wrap;
 
 		padding: 12px 12px 6px 12px;
-		background-color: $color-background-darkest;
+		background-color: $color-background-dark;
 
 		.tab-button {
 			cursor: pointer;
@@ -164,7 +178,7 @@ a {
 		}
 
 		.control-section:not(:empty) {
-			background-color: $color-background-dark;
+			background-color: $color-background-light;
 			padding: 12px;
 
 			&:not(:last-child) {
@@ -182,7 +196,7 @@ a {
 			}
 
 			li:nth-child(odd) {
-				background-color: $color-background-dark;
+				background-color: $color-background-light;
 			}
 		}
 	}
