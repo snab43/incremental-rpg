@@ -12,3 +12,15 @@ If you want to build it, use `npm run build` and it will output to a `/dist` fol
 
 ## Built With
 Vite, HTML, SASS, and TypeScript.
+
+## Screenshots
+**Desktop View**
+
+![Desktop View](https://i.postimg.cc/hP6xNZMq/Capture.png)
+
+**Mobile View**
+
+![Mobile View](https://i.postimg.cc/9Q9T2PNw/Screen-Shot-2023-07-18-at-14-41-29.png)
+
+## Acknowledgements
+- [VT323 font](https://fonts.google.com/specimen/VT323) by Peter Hull
