@@ -10,3 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	console.log("Initializing UI.");
 	UI.initialize(game);
 });
+
+// Disable mobile scrolling
+document.ontouchmove = function (e) {
+	e.preventDefault();
+}
