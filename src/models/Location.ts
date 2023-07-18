@@ -1,5 +1,5 @@
-import actionContent from '../content/actions.json';
-import locationContent from '../content/locations.json';
+//import actionContent from '../content/actions.json';
+//import locationContent from '../content/locations.json';
 
 export enum LOCATION_TYPE {
 	Town = "Town",
