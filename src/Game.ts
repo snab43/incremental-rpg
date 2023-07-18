@@ -18,6 +18,7 @@ export class Game {
 		this.player = new Player();
 		this.inventory = new Inventory();
 		this.location = new Location();
+		UI.sendNotification("Game started.", true);
 	}
 
 	getData(): GameData {

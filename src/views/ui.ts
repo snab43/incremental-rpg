@@ -86,7 +86,7 @@ export namespace UI {
 		let ul = document.getElementById('log-list');
 		let li = document.createElement('li');
 
-		li.appendChild(document.createTextNode(`${Utils.getTime()} - ${logEntry}`));
+		li.appendChild(document.createTextNode(`(${Utils.getTime()}) ${logEntry}`));
 		ul?.prepend(li);
 	}
 }

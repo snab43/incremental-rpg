@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@font-face {
+	font-family: 'VT323';
+	src: url('/fonts/VT323-Regular.ttf') format('truetype');
+}
 
 $color-font: #f0f0f0;
 $color-font-heading: #e59ec5;
@@ -24,10 +27,11 @@ body {
 	overflow: hidden;
 }
 
-#game-container, button, h1, h2, h3, h4, h5, h6 {
+#game-container * {
 	font-family: 'VT323', monospace;
-	font-size: 20px;
-	font-weight: 300;
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 1.1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -178,7 +182,7 @@ a {
 				text-transform: uppercase;
 
 				&:not(:last-child) {
-					margin-right: 12px;
+					margin-right: 6px;
 				}
 
 				&:hover {
@@ -207,10 +211,10 @@ a {
 
 			.control-section:not(:empty) {
 				background-color: $color-background-light;
-				padding: 6px 12px;
+				padding: 8px 8px;
 
 				&:not(:last-child) {
-					margin-bottom: 12px;
+					margin-bottom: 18px;
 				}
 			}
 
@@ -220,7 +224,7 @@ a {
 				padding: 0;
 
 				li {
-					padding: 3px 6px;
+					padding: 6px;
 				}
 
 				li:nth-child(odd) {
