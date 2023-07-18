@@ -231,7 +231,13 @@ a {
 	}
 }
 
-// Landscape mobile view
+@media only screen and (max-device-width: 1080px) {
+	#mobile-notice {
+		display: none;
+	}
+}
+
+// Mobile landscape UI
 @media only screen and (max-device-width: 1080px) and (orientation: landscape) {
 	#game-container {
 		flex-direction: row;
