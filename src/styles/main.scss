@@ -13,9 +13,12 @@ $color-background-light: lighten($color-background, 5%);
 $color-background-dark: darken($color-background, 5%);
 $color-background-darker: darken($color-background, 10%);
 
+html {
+	background-color: black;
+}
+
 body {
 	margin: 0;
-	background-color: black;
 	background: url('/images/stars.png') repeat fixed center;
 	overflow: hidden;
 }
