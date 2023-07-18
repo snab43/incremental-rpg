@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-$color-font: #ffeef7;
-$color-font-heading: #ffabab;
+$color-font: #f7f0f4;
+$color-font-heading: #e9d3df;
 
-$color-interactive: #008000;
+$color-interactive: #1e8d1e;
 $color-interactive-hover: lighten($color-interactive, 10%);
 
-$color-background: #5c1e42;
+$color-background: #4b3b44;
 $color-background-dark: darken($color-background, 10%);
 $color-background-darker: darken($color-background, 15%);
 $color-background-darkest: darken($color-background, 20%);
