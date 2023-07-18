@@ -94,27 +94,6 @@ a {
 	margin: auto;
 	box-shadow: 0 0 100px 15px rgba(0, 3, 14, 0.5);
 
-	// Notifications
-	#notifications {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		align-items: end;
-		margin: 12px;
-		right: 0;
-		z-index: 1;
-
-		li {
-			width: fit-content;
-			color: $color-font;
-			background-color: $color-background-dark;
-			padding: 6px 12px;
-			margin-bottom: 6px;
-			cursor: default;
-			user-select: none;
-		}
-	}
-
 	// View
 	#view {
 		width: 100%;
@@ -127,6 +106,27 @@ a {
 
 		pointer-events: none;
 		user-select: none;
+
+		// Notifications
+		#notifications {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			margin: 12px;
+			right: 0;
+			z-index: 1;
+
+			li {
+				width: fit-content;
+				color: $color-font;
+				background-color: $color-background-dark;
+				padding: 6px 12px;
+				margin-bottom: 6px;
+				cursor: default;
+				user-select: none;
+			}
+		}
 
 		.display {
 			margin: 12px;
@@ -156,6 +156,7 @@ a {
 
 		display: flex;
 		flex-direction: column;
+		z-index: 2;
 
 		color: $color-font;
 		background-color: $color-background;
@@ -236,10 +237,6 @@ a {
 		max-width: 1080px;
 		max-height: 810px;
 		height: 100vh;
-
-		#notifications {
-			right: 50%;
-		}
 
 		#view, #controls {
 			height: auto;
