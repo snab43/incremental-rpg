@@ -20,7 +20,7 @@
 				</div>
 
 				<div id="location-display" class="display">
-					<div>Location: <span id="location"></span></div>
+					<div>Location: <span id="location">Forest</span></div>
 				</div>
 
 				<img id="player" src="/images/player.png"></div>
@@ -40,13 +40,12 @@
 				<div id="control-content">
 					<!-- Actions -->
 					<div id="actions" class="tab-content active">
-						<div id="effort-actions" class="action-container">
+						<h2>Effort [Not Working]</h2>
+						<div id="effort-actions" class="control-section">
 							<button>Chop wood</button>
-							<button>Fight</button>
 						</div>
-						<div id="buy-actions" class="action-container"></div>
-						<div id="sell-actions" class="action-container"></div>
-						<div id="go-actions" class="action-container">
+						<h2>Movement [Not Working]</h2>
+						<div id="go-actions" class="control-section">
 							<button>Go to Town</button>
 						</div>
 					</div>
@@ -63,9 +62,18 @@
 		
 					<!-- Settings -->
 					<div id="settings" class="tab-content">
-						<button id="save-game-button">Save Game</button>
-						<button id="load-game-button">Load Game</button>
-						<button id="delete-game-button">Delete Game</button>
+						<h2>Gameplay [Not Working]</h2>
+						<div id="gameplaySettings" class="control-section">
+							<button data-setting="militaryTime">Time [AM/PM]</button>
+							<button data-setting="crtFilter">CRT Filter [OFF]</button>	
+						</div>
+
+						<h2>Data Management</h2>
+						<div id="dataSettings" class="control-section">
+							<button id="save-game-button">Save Game</button>
+							<button id="load-game-button">Load Game</button>
+							<button id="delete-game-button">Delete Game</button>	
+						</div>
 
 						<p>Copyright 2023 * <a href="https://github.com/snab43/incremental-rpg" target="_blank">GitHub</a></p>
 					</div>

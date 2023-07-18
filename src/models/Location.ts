@@ -1,4 +1,3 @@
-import { ActionData, Action } from './Action';
 import actionContent from '../content/actions.json';
 import locationContent from '../content/locations.json';
 
@@ -13,14 +12,14 @@ export interface LocationData {
 	name: string,
 	type: LOCATION_TYPE,
 	reqLevel: number,
-	actionList: Array<ActionData>
+	actionList: Array<string>
 }
 
 export class Location {
 	name: string = "Town";
 	type: LOCATION_TYPE = LOCATION_TYPE.Town;
 	reqLevel: number = 0;
-	actionList: Array<ActionData> = [];
+	actionList: Array<string> = [];
 
 	constructor() {
 		if (localStorage.getItem('locationData')) {
