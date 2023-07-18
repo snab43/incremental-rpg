@@ -30,7 +30,7 @@ export class Player {
 			stamina: this.stamina,
 			maxStamina: this.maxStamina,
 			level: this.level,
-			exp: this.exp,
+			exp: this.exp
 		}
 	} 
 

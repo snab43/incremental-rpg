@@ -34,9 +34,9 @@ export class Inventory {
 		if (localStorage.getItem('inventoryData')) {
 			let inventoryData: any = JSON.parse(<string>localStorage.getItem('inventoryData'));
 
-			this.money = inventoryData.health;
-			this.wood = inventoryData.maxHealth;
-			this.stone = inventoryData.stamina;
+			this.money = inventoryData.money;
+			this.wood = inventoryData.wood;
+			this.stone = inventoryData.stone;
 
 			console.log("inventoryData loaded.");
 		} else {

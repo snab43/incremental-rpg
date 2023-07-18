@@ -2,6 +2,7 @@ import { Game } from '../Game';
 import { PlayerData } from '../models/Player';
 import { InventoryData } from '../models/Inventory';
 import { Utils } from '../utils';
+import { Location } from '../models/Location';
 
 export namespace UI {
 	export function initialize(game: Game): void {
@@ -35,6 +36,7 @@ export namespace UI {
 
 		// Run UI update
 		reloadStats(game.getData().player);
+		//reloadLocation(game.getData().player);
 		reloadInventory(game.getData().inventory);
 	}
 
@@ -45,6 +47,10 @@ export namespace UI {
 		document.getElementById('stat-maxStamina')!.innerText = `${player.maxStamina}`;
 		document.getElementById('stat-level')!.innerText = `${player.level}`;
 		document.getElementById('stat-exp')!.innerText = `${player.exp}`;
+	}
+
+	export function reloadLocation(location: Location): void {
+		document.getElementById('location')!.innerText = location.name;
 	}
 
 	export function reloadActions(): void {

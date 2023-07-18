@@ -2,49 +2,15 @@
 	"town": {
 		"name": "Oakshade Hollow",
 		"type": "Town",
-		"actionList": [
-			{
-				"name": "Beg for Money",
-				"type": "Effort",
-				"spCost": 1,
-				"moneyCost": 0.25,
-				"itemGained": null,
-				"amountGained": null,
-				"locationName": null
-			},
-			{
-				"name": "Go to Forest",
-				"type": "Go",
-				"spCost": 1,
-				"moneyCost": null,
-				"itemGained": null,
-				"amountGained": null,
-				"locationName": "forest"
-			}
-		]
+		"reqLevel": 0,
+		"actionList": ["begForMoney"],
+		"movementList": ["forest"]
 	},
 	"forest": {
 		"name": "Forest",
 		"type": "Nature",
-		"actionList": [
-			{
-				"name": "Chop Wood",
-				"type": "Effort",
-				"spCost": 1,
-				"moneyCost": null,
-				"itemGained": "wood",
-				"amountGained": 1,
-				"locationName": null
-			},
-			{
-				"name": "Go to Town",
-				"type": "Go",
-				"spCost": 1,
-				"moneyCost": null,
-				"itemGained": null,
-				"amountGained": null,
-				"locationName": "town"
-			}
-		]
+		"reqLevel": 0,
+		"actionList": ["chopWood"],
+		"movementList": ["town"]
 	}
 }

@@ -1,0 +1,18 @@
+{
+	"begForMoney": {
+		"name": "Beg for Money",
+		"type": "Effort",
+		"sp": 1,
+		"money": 0.25,
+		"item": null,
+		"amount": null
+	},
+	"chopWood": {
+		"name": "Chop Wood",
+		"type": "Effort",
+		"sp": 1,
+		"money": null,
+		"item": "wood",
+		"amount": 1
+	}
+}

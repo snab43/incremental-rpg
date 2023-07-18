@@ -1,8 +1,18 @@
-enum ACTION_TYPE {
+export enum ACTION_TYPE {
 	Effort = "Effort",
 	Buy = "Buy",
 	Sell = "Sell",
 	Go = "Go"
+}
+
+export interface ActionData {
+	name: string,
+	type: ACTION_TYPE,
+	spCost: number,
+	moneyCost: number,
+	itemGained: string,
+	amountGained: number,
+	locationName: string
 }
 
 export class Action {
