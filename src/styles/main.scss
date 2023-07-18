@@ -156,6 +156,7 @@ a {
 
 		display: flex;
 		flex-direction: column;
+		overflow: hidden;
 		z-index: 2;
 
 		color: $color-font;
