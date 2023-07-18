@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 $color-font: #f0f0f0;
-$color-font-heading: #e9d3df;
+$color-font-heading: #e59ec5;
 $color-font-inactive: darken($color-font, 25%);
 
 $color-interactive: #1e8d1e;
 $color-interactive-hover: lighten($color-interactive, 10%);
 
 $color-background: #22191e;
-$color-background-lighter: lighten($color-background, 15%);
-$color-background-light: lighten($color-background, 10%);
-$color-background-dark: darken($color-background, 10%);
-$color-background-darker: darken($color-background, 15%);
+$color-background-lighter: lighten($color-background, 10%);
+$color-background-light: lighten($color-background, 5%);
+$color-background-dark: darken($color-background, 5%);
+$color-background-darker: darken($color-background, 10%);
 
 body {
 	margin: 0;
@@ -64,6 +64,12 @@ a {
 	}
 }
 
+.ul-unstyled {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
 // Game
 #game-container {
 	display: flex;
@@ -76,9 +82,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
-	list-style-type: none;
 	margin: 12px;
-	padding: 0;
 	right: 0;
 	z-index: 1;
 
@@ -179,7 +183,7 @@ a {
 
 		.control-section:not(:empty) {
 			background-color: $color-background-light;
-			padding: 12px;
+			padding: 6px 12px;
 
 			&:not(:last-child) {
 				margin-bottom: 12px;

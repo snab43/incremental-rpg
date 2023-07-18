@@ -59,7 +59,9 @@ export namespace UI {
 	}
 
 	export function reloadInventory(inventory: InventoryData): void {
-		document.getElementById('stat-money')!.innerText = `${inventory.money.toFixed(2)}`;
+		document.getElementById('wallet-money')!.innerText = `${inventory.money.toFixed(2)}`;
+		document.getElementById('inventory-wood')!.innerText = `${inventory.wood}`;
+		document.getElementById('inventory-stone')!.innerText = `${inventory.stone}`;
 	}
 
 	export function sendNotification(text: string, log: boolean): void {

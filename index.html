@@ -8,7 +8,7 @@
 	<body>
 		<div id="game-container">
 			<!-- Game Notifications -->
-			<ul id="notifications"></ul>
+			<ul id="notifications" class="ul-unstyled"></ul>
 
 			<!-- Game View -->
 			<div id="view">
@@ -52,7 +52,21 @@
 		
 					<!-- Inventory -->
 					<div id="inventory" class="tab-content">
-						Money: $<span id="stat-money"></span>
+						<h2>Wallet</h2>
+						<div class="control-section">
+							Money: $<span id="wallet-money"></span>
+						</div>
+						<h2>Materials</h2>
+						<div class="control-section">
+							<ul class="ul-unstyled">
+								<li>Wood: <span id="inventory-wood"></span></li>
+								<li>Stone: <span id="inventory-stone"></span></li>
+							</ul>
+						</div>
+						<h2>Items</h2>
+						<div class="control-section">
+							None
+						</div>
 					</div>
 
 					<!-- Log -->
