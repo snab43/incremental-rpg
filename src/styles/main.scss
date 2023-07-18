@@ -74,133 +74,137 @@ a {
 #game-container {
 	display: flex;
 	flex-direction: column;
-}
 
-// Notifications
-#notifications {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	align-items: end;
-	margin: 12px;
-	right: 0;
-	z-index: 1;
-
-	li {
-		width: fit-content;
-		color: $color-font;
-		background-color: $color-background-dark;
-		padding: 6px 12px;
-		margin-bottom: 6px;
-		cursor: default;
-		user-select: none;
-	}
-}
-
-// View
-#view {
-	width: 100%;
-	height: 40vh;
-	position: relative;
-	
-	background: url('/images/grass.png');
-	background-repeat: repeat;
-	background-color: black;
-
-	pointer-events: none;
-	user-select: none;
-
-	.display {
-		margin: 12px;
-		padding: 6px 12px;
-		color: $color-font;
-		background-color: $color-background-darker;
-		width: fit-content;
-	}
-
-	#location-display {
+	// Notifications
+	#notifications {
 		position: absolute;
-		bottom: 0;
-	}
-
-	#player {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-30px) translateY(-45px);
-	}
-}
-
-// Controls
-#controls {
-	width: 100%;
-	height: 60vh;
-
-	color: $color-font;
-	background-color: $color-background;
-
-	#control-tabs {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: end;
+		margin: 12px;
+		right: 0;
+		z-index: 1;
 
-		padding: 12px 12px 6px 12px;
-		background-color: $color-background-dark;
-
-		.tab-button {
-			cursor: pointer;
-			color: $color-interactive;
-			border: 2px solid $color-interactive;
-			margin-bottom: 6px;
-			padding: 2px 10px;
-			text-transform: uppercase;
-
-			&:not(:last-child) {
-				margin-right: 12px;
-			}
-
-			&:hover {
-				background-color: rgba($color-interactive-hover, 0.2);
-			}
-		}
-	
-		.tab-button.active {
-			cursor: default;
+		li {
+			width: fit-content;
 			color: $color-font;
-			background-color: $color-interactive;
+			background-color: $color-background-dark;
+			padding: 6px 12px;
+			margin-bottom: 6px;
+			cursor: default;
+			user-select: none;
 		}
 	}
 
-	#control-content {
-		padding: 12px;
+	// View
+	#view {
+		width: 100%;
+		height: 40vh;
+		position: relative;
+		
+		background: url('/images/grass.png');
+		background-repeat: repeat;
+		background-color: black;
 
-		.tab-content {
-			display: none;
-		}
-	
-		.tab-content.active {
-			display: block;
-		}
+		pointer-events: none;
+		user-select: none;
 
-		.control-section:not(:empty) {
-			background-color: $color-background-light;
+		.display {
+			margin: 12px;
 			padding: 6px 12px;
+			color: $color-font;
+			background-color: $color-background-darker;
+			width: fit-content;
+		}
 
-			&:not(:last-child) {
-				margin-bottom: 12px;
+		#location-display {
+			position: absolute;
+			bottom: 0;
+		}
+
+		#player {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-30px) translateY(-45px);
+		}
+	}
+
+	// Controls
+	#controls {
+		width: 100%;
+		height: 60vh;
+
+		display: flex;
+		flex-direction: column;
+
+		color: $color-font;
+		background-color: $color-background;
+
+		#control-tabs {
+			display: flex;
+			flex-wrap: wrap;
+
+			padding: 12px 12px 6px 12px;
+			background-color: $color-background-dark;
+
+			.tab-button {
+				cursor: pointer;
+				color: $color-interactive;
+				border: 2px solid $color-interactive;
+				margin-bottom: 6px;
+				padding: 2px 10px;
+				text-transform: uppercase;
+
+				&:not(:last-child) {
+					margin-right: 12px;
+				}
+
+				&:hover {
+					background-color: rgba($color-interactive-hover, 0.2);
+				}
+			}
+		
+			.tab-button.active {
+				cursor: default;
+				color: $color-font;
+				background-color: $color-interactive;
 			}
 		}
 
-		#log-list {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
+		#control-content {
+			overflow: auto;
+			padding: 12px;
 
-			li {
-				padding: 3px 6px;
+			.tab-content {
+				display: none;
+			}
+		
+			.tab-content.active {
+				display: block;
 			}
 
-			li:nth-child(odd) {
+			.control-section:not(:empty) {
 				background-color: $color-background-light;
+				padding: 6px 12px;
+
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+			}
+
+			#log-list {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					padding: 3px 6px;
+				}
+
+				li:nth-child(odd) {
+					background-color: $color-background-light;
+				}
 			}
 		}
 	}
