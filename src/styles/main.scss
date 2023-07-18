@@ -16,9 +16,11 @@ $color-background-darker: darken($color-background, 10%);
 body {
 	margin: 0;
 	background-color: black;
+	background: url('/images/stars.png') repeat fixed center;
+	overflow: hidden;
 }
 
-body, button, h1, h2, h3, h4, h5, h6 {
+#game-container, button, h1, h2, h3, h4, h5, h6 {
 	font-family: 'VT323', monospace;
 	font-size: 20px;
 	font-weight: 300;
@@ -70,10 +72,22 @@ a {
 	padding: 0;
 }
 
+#mobile-notice {
+	color: rgba(255, 255, 255, 0.35);
+	font-style: italic;
+	text-align: center;
+	margin-top: 12px;
+}
+
 // Game
 #game-container {
 	display: flex;
 	flex-direction: column;
+
+	max-width: 810px;
+	max-height: 1080px;
+	margin: auto;
+	box-shadow: 0 0 100px 15px rgba(0, 3, 14, 0.5);
 
 	// Notifications
 	#notifications {
@@ -206,6 +220,24 @@ a {
 					background-color: $color-background-light;
 				}
 			}
+		}
+	}
+}
+
+// Landscape mobile view
+@media only screen and (max-device-width: 1080px) and (orientation: landscape) {
+	#game-container {
+		flex-direction: row;
+		max-width: 1080px;
+		max-height: 810px;
+		height: 100vh;
+
+		#notifications {
+			right: 50%;
+		}
+
+		#view, #controls {
+			height: auto;
 		}
 	}
 }
